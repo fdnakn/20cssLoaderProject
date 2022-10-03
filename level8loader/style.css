@@ -1,0 +1,43 @@
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-color: #212831;
+}
+/* first lets style the loader */
+.loader {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  background-color: #00adb5;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: grow 1.5s infinite alternate-reverse; 
+  /* alternate reserve : The animation is played backwards first,
+  then forwards */
+}
+/* inner will cover the loader but not all of them */
+.inner {
+  background-color: #212831;
+  width: 80%;
+  height: 80%;
+  border-radius: 100%;
+}
+
+/* and animation  */
+@keyframes grow {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 100px 20px #00adb5;
+  }
+
+  100% {
+    transform: scale(1.5);
+    box-shadow: 0 0 100px 20px #000;
+  }
+}

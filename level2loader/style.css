@@ -1,0 +1,41 @@
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-color: #e8e8e8;
+}
+/* fistly we will design our loader */
+.loader {
+  width: 40%;
+  height: 4px;
+  border-radius: 30px;
+  background-color: rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+/* progress bar in the loader */
+.loader::before {
+  content: "";
+  position: absolute;
+  background: black;
+  top: 0;
+  left: 0;
+  width: 33%;
+  height: 100%;
+  border-radius: 30px;
+  animation: move 2s linear infinite;
+}
+
+/* and our animation */
+@keyframes move {
+  50% {
+    left: 70%;
+  }
+  100% {
+    left: 0;
+  }
+ 
+}

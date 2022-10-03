@@ -1,0 +1,49 @@
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-color: #212831;
+}
+/* lets give some feature to our loader class */
+.loader {
+  position: relative;
+  height: 50px;
+  width: 50px;
+}
+
+/* we will have two circle we 
+will use pseudo selectors */
+.loader::before,
+.loader::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  background-color: #00adb5;
+  animation: grow 1s linear infinite;
+  transform: scale(0);
+  opacity: 0;
+}
+/* one of them will be delayed we want to see them in rows */
+.loader::after {
+  animation-delay: .5s;
+}
+/* and lets give some animation */
+
+@keyframes grow {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
