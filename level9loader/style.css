@@ -1,0 +1,35 @@
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-color: #212831;
+}
+
+/* lets style loader first */
+.loader {
+  width: 60px;
+  height: 60px;
+}
+/* now progress bar in the loader */
+.loader::before {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  /* now it is square  but we will do it circle
+  and we will show it's only border-topb visible
+  and we will turn it infinite */
+  border-radius: 50%;
+  border-top: 2px solid #00adb5;
+  animation: spin 0.8s linear infinite;
+}
+/* and keyframe */
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

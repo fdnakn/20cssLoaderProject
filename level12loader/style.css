@@ -1,0 +1,46 @@
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-color: #212831;
+}
+
+/* fisrt we will style main loader  */
+.loader {
+  width: 56px;
+  height: 56px;
+  border: 4px solid #0000;
+  border-radius: 50%;
+  border-right-color: #00adb5;
+  animation: rotate 1s infinite linear;
+  position: relative;
+}
+
+
+/*and lets style other two loader */
+.loader::before,
+.loader::after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  right: 5px;
+  border: inherit;
+  border-radius: 50%;
+  animation: rotate 2s infinite;
+  /* this will be more slow 1 */
+}
+/* we need to give margin for space */
+.loader::after {
+  margin-right: 8px;
+}
+
+/* and keyframe */
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
