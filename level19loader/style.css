@@ -1,0 +1,62 @@
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-color: #212831;
+}
+/* first we swill style the loader this will be span container  */
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  gap: 6px;
+  height: 100px;
+}
+/* and span's common feautures */
+.loader span {
+  width: 4px;
+  height: 50px;
+  animation: scale 2s ease-in-out infinite;
+}
+.loader span:nth-child(1) {
+  background: #00adb5;
+  animation-delay: 0.9s;
+}
+.loader span:nth-child(2) {
+  background: yellowgreen;
+  animation-delay: 0.8s;
+}
+
+.loader span:nth-child(3) {
+  background: gold;
+  animation-delay: 0.7s;
+}
+
+.loader span:nth-child(4) {
+  background: goldenrod;
+  animation-delay: 0.6s;
+}
+
+.loader span:nth-child(5) {
+  background: aqua;
+  animation-delay: 0.5s;
+}
+
+@keyframes scale {
+  0% {
+    transform: scale(0.05);
+  }
+  20% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.05);
+  }
+  100% {
+    transform: scale(0.05);
+  }
+}

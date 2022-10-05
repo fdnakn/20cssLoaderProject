@@ -1,0 +1,55 @@
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-color: #212831;
+}
+/* firstly lets style our lodaer */
+.loader {
+  background: transparent;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* and not lets style the white circle */
+.circle {
+  width: 80px;
+  height: 80px;
+  border: 2px solid white;
+  position: absolute;
+  border-radius: 50%;
+  animation: rotate 2s linear infinite;
+  /* this circle will turn  */
+}
+/* now time to style little ball */
+.circle::before {
+  content: "";
+  position: absolute;
+  background: #00adb5;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  box-shadow: 0 0 20px #00adb5, 0 0 60px #00adb5;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
